@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reiser's Map Shop</title>
+    <title>eCommerce Landing Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            background-image: url("images/MapBackground.png");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
             color: #fff; /* Adjust text color for readability */
         }
         header {
@@ -37,14 +33,18 @@
             background-color: rgba(85, 85, 85, 0.8);
         }
         .hero {
+            background: url("images/MapBackground.png") no-repeat center center/cover;
             height: 500px;
+            color: #fff;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Align to the left */
-            text-align: left; /* Left align text */
-            flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+            text-align: left; /* Align text to the left */
             padding-left: 50px; /* Add padding to the left */
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+            padding: 20px;
+            border-radius: 5px;
         }
         .hero h1 {
             font-size: 4em;
@@ -89,11 +89,13 @@
         <a href="contact.html">Contact</a>
     </nav>
     <div class="hero">
-        <h1>Welcome to Our Store</h1>
-        <p>Get your favorite places in 3D</p>
-        <div class="buttons">
-            <a href="shop.html">Shop Now</a>
-            <a href="about.html">Learn More</a>
+        <div class="hero-content">
+            <h1>Welcome to Our Store</h1>
+            <p>Get your favorite places in 3D</p>
+            <div class="buttons">
+                <a href="shop.html">Shop Now</a>
+                <a href="about.html">Learn More</a>
+            </div>
         </div>
     </div>
     <footer>
