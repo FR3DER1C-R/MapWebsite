@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sale</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        function toggleCustomColor(select) {
+            var customColorField = document.getElementById('customColorField');
+            customColorField.style.display = select.value === 'custom' ? 'block' : 'none';
+        }
+        function setSizeFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const size = urlParams.get('size');
+            if (size) {
+                document.getElementById('size').value = size;
+                toggleCustomSize({value: size});
+            }
+        }
+
+        window.onload = setSizeFromURL;
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/TCTextLogoWhite.png" alt="Text Logo" class="text-logo">
+        <img src="images/TCLogoCircle.png" alt="Header Logo" class="header-logo">
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container2">
+        <div class="form-container">
+            <div class="left-column">
+                <div class="form-group">
+                    <label for="size">Select Size:</label>
+                    <select id="size" name="size" onchange="toggleCustomSize(this)">
+                        <option value="small">Small</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color">Select Color:</label>
+                    <select id="color" name="color" onchange="toggleCustomColor(this)">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div id="customColorField" style="display: none;">
+                    <div class="form-group">
+                        <label for="customColor">Custom Color:</label>
+                        <input type="text" id="customColor" name="customColor">
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+    
+
+           </form>   
+                         <div class="button-container">
+            <button class="buy-button"  type="submit">Order</button>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>
+        <p>&copy; 2024 TerraCarto All rights reserved.</p>
+    </footer>
+</body>
+</html>
