@@ -34,6 +34,7 @@
       background-color: rgba(68, 68, 68, 0.8);
   }
   nav a {
+      font-family: "Montserrat", sans-serif;
       color: #fff;
       padding: 10px 20px;
       text-decoration: none;
@@ -111,12 +112,15 @@
             height: auto;
         }
         .product h2 {
+            font-family: "Montserrat", sans-serif;
             font-size: 2em;
         }
         .product p {
+            font-family: "Montserrat", sans-serif;
             font-size: 1.2em;
         }
         .product .price {
+            font-family: "Montserrat", sans-serif;
             font-size: 1.5em;
             color: #333;
         }
